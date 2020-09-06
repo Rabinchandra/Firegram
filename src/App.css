@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
+
+body {
+  font-family: "Merriweather", "arial", "sans-serif";
+  margin: 0;
+}
+
+:root {
+  --primary-color: rgb(204, 136, 9);
+  --primary-light-color: rgb(240, 175, 53);
+  --black-color: rgb(68, 68, 68);
+}
+
+.logo__text {
+  margin-top: 2rem;
+  margin-left: 20%;
+  color: var(--primary-color);
+  font-size: 2em;
+}
+
+.primary__text {
+  text-align: center;
+  margin: 3rem 0px;
+  color: var(--black-color);
+}
+
+.upload__form {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+.file__input {
+  display: none;
+}
+
+.file__input__label {
+  border: 1px solid var(--primary-light-color);
+  color: var(--primary-light-color);
+  padding: 1px 11px;
+  font-size: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.file__input__label:hover {
+  background: var(--primary-light-color);
+  color: #fff;
+}
+
+.output {
+  margin: 2rem;
+}
+
+/* PROGRESS BAR */
+.progress__bar {
+  background: var(--primary-light-color);
+  height: 5px;
+}
+
+/* IMAGES */
+.image__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  /* border: 1px solid red; */
+  margin: 5rem 4rem;
+  justify-content: center;
+}
+
+.image {
+  position: relative;
+  height: 20rem;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.image img {
+  position: absolute;
+  min-width: 100%;
+  max-width: 120%;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.modal img {
+  display: block;
+  max-height: 60%;
+  min-height: 50%;
+  margin: 80px auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0);
+  border: 2px solid #fff;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .image__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .image__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .logo__text {
+    font-size: 25px;
+    margin-left: 10%;
+  }
+
+  .primary__text {
+    font-size: 12px;
+  }
+}
